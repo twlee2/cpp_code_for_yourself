@@ -41,7 +41,7 @@ int main() {
                                     "finds errors quicker than the compiler",
                                     "is not afraid of C++ error messages"};
   int ending_idx = name.size() % ending.size();
-
+  std::cout << "\nHere is your description:" << std::endl;
   std::cout << name << ", "
             << "the " << adjectives[adj_idx] << " " << season_to_noun[season]
             << " "
