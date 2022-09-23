@@ -10,11 +10,11 @@ int main() {
   std::cout << "I will generate a number and you will guess it!" << std::endl;
 
   // get a smallest number from user
-  std::cout << "Please provide the smallest number:" << std::endl;
+  std::cout << "Please provide the smallest number: ";
   std::cin >> smallest_number;
 
   // get a largest number from user
-  std::cout << "Please provide the largest number:" << std::endl;
+  std::cout << "Please provide the largest number: ";
   std::cin >> largest_number;
 
   // generage a random number between the smallest number and largest number
@@ -25,7 +25,7 @@ int main() {
 
   // start guessing game with user
   while (true) {
-    std::cout << "Please provide the next guess:";
+    std::cout << "Please provide the next guess: ";
     std::cin >> user_guess;
     if (user_guess < answer) {
       std::cout << "Your number is too small. Try again!" << std::endl;
@@ -38,7 +38,7 @@ int main() {
     }
     // end game as guess is correct
     std::cout << "You've done it! You guessed the number " << answer << " in "
-              << guess_count << " guesses!'" << std::endl;
+              << guess_count << " guesses!" << std::endl;
     break;
   }
 
