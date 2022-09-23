@@ -25,7 +25,7 @@ int main() {
 
   // start guessing game with user
   while (true) {
-    std::cout << "Please provide the next guess: ";
+    std::cout << "Please provide the next guess:";
     std::cin >> user_guess;
     if (user_guess < answer) {
       std::cout << "Your number is too small. Try again!" << std::endl;
