@@ -10,11 +10,11 @@ int main() {
   std::cout << "I will generate a number and you will guess it!" << std::endl;
 
   // get a smallest number from user
-  std::cout << "Please provide the smallest number: ";
+  std::cout << "Please provide the smallest number: " << std::endl;
   std::cin >> smallest_number;
 
   // get a largest number from user
-  std::cout << "Please provide the largest number: ";
+  std::cout << "Please provide the largest number: " << std::endl;
   std::cin >> largest_number;
 
   // generage a random number between the smallest number and largest number
