@@ -38,7 +38,7 @@ int main() {
     }
     // end game as guess is correct
     std::cout << "You've done it! You guessed the number " << answer << " in "
-              << guess_count << " guesses!" << std::endl;
+              << guess_count << " guesses!'" << std::endl;
     break;
   }
 
