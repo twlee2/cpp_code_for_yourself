@@ -5,8 +5,7 @@ void welcome_message() {
   std::cout << "Welcome to the GUESSING GAME!" << std::endl;
   std::cout << "I will generate a number and you will guess it!" << std::endl;
 }
-
-int long random_number_generation() {
+void random_number_generation(int &answer) {
   int long smallest_number{}, largest_number{};
   std::random_device random_device;
   std::mt19937 random_engine{random_device()};
@@ -20,23 +19,21 @@ int long random_number_generation() {
   std::uniform_int_distribution<int long> distribution{smallest_number,
                                                        largest_number};
   std::cout << "I've generated a number. Try to guess it!" << std::endl;
-  return distribution(random_engine);
+  answer = distribution(random_engine);
 }
 
-int long guess_from_user() {
-  int long user_guess{};
+void guess_from_user(int &user_guess) {
   std::cout << "Please provide the next guess: ";
   std::cin >> user_guess;
-  return user_guess;
 }
 
 void guessing_game() {
-  int guess_count{1};
+  int answer{}, user_guess{}, guess_count{1};
   welcome_message();
-  int long answer = random_number_generation();
-  auto user_guess = guess_from_user();
+  random_number_generation(answer);
 
   while (true) {
+    guess_from_user(user_guess);
     if (user_guess < answer) {
       std::cout << "Your number is too small. Try again!" << std::endl;
       guess_count += 1;
